@@ -9,4 +9,8 @@ resource "aws_instance" "web" {
 #  user_data = ""
 
   user_data_replace_on_change = true
+
+  tags = {
+    Name = "FreeTAKServer"
+  }
 }
