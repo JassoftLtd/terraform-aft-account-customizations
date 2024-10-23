@@ -14,13 +14,6 @@ data "aws_ami" "ubuntu" {
   owners = ["099720109477"] # Canonical
 }
 
-data "aws_vpc" "vpc" {
-  filter {
-    name   = "is-default"
-    values = [true]
-  }
-}
-
 data "aws_subnets" "private" {
   filter {
     name   = "tag:Network"
